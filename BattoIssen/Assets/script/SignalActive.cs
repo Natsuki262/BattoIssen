@@ -5,46 +5,30 @@ using UnityEngine.UI;
 
 public class SignalActive : MonoBehaviour
 {
-    [SerializeField]
-     GameObject signal;
-    public bool Signalflag = false;
 
+    bool m_isActive = false; //アクティブになったか
 
-    private void Awake()
+    public bool IsActive
     {
-        signal.SetActive(true);
+        get
+        {
+            return m_isActive;
+        }
+        set
+        {
+            m_isActive = value;
+        }
     }
 
+    // Use this for initialization
     void Start()
     {
-        //signalObjct=GameObject.Find("signal");
-        // Debug.Log(signalObjct);
 
-
-        // gameObject.transform.Find("signal").gameObject.SetActive(true);
-        //signal = GameObject.Find("signal");
-        Debug.Log(signal);
-        signal.SetActive(false);
-        // IEnumerator Dela
-        Invoke("Delay", 1.5f);
     }
-    /* IEnumerator Delay()
-     {
-         yield return null;
-         gameObject.transform.Find("signal").gameObject.SetActive(true);
-     }*/
 
     // Update is called once per frame
     void Update()
     {
-
-
-    }
-    void Delay()
-    {
-        signal.SetActive(true);
-        Signalflag = true;
-
 
     }
 }
