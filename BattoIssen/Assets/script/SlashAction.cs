@@ -28,7 +28,7 @@ public class SlashAction : MonoBehaviour
                 Debug.Log("<color=red>斬殺</color>");
                 SlashAction_P1 = Time.realtimeSinceStartup;
                 Debug.Log(SlashAction_P1 + "Player1");
-                m_signalActive.IsActive = false;
+               // m_signalActive.IsActive = false;
             }
             if (SlashAction_P1 <SlashAction_P2)
             {
@@ -43,7 +43,7 @@ public class SlashAction : MonoBehaviour
                 Debug.Log("<color=blue>斬殺</color>");
                 SlashAction_P2 = Time.realtimeSinceStartup;
                 Debug.Log(SlashAction_P2 + "Player2");
-                m_signalActive.IsActive = false;
+                //m_signalActive.IsActive = false;
             }
             if (SlashAction_P1>SlashAction_P2)
             {
